@@ -58,7 +58,7 @@ public class LoginSteps extends ApplicationPageBase{
         // Write code here that turns the phrase above into concrete actions
  //       String actual = targetSignin.incorrectPassErr();
  //       Assert.assertEquals(actual,"That password is incorrect.");
-    Assert.assertEquals( b: true, b1: true );
+    Assert.assertEquals( true, true );
     }
 
 
