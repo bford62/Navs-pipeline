@@ -41,7 +41,9 @@ node() {
     }
     stage('Expose report') {
 		echo "*** Expose Reports ***"
+		echo "*** Archive Artifacts ***"
         archiveArtifacts "**/cucumber.json"
+		echo "*** cucumber cucumber.json ***"
         cucumber '**/cucumber.json'
     }
 	stage('Import results to Xray') {
