@@ -7,7 +7,7 @@ node() {
 		cleanWs()
 		def os = System.properties['os.name'].toLowerCase()
 		if (os.contains("mac")) { 
-		    env.WORKSPACE_LOCAL = sh(returnStdout: true, script: 'echo %cd%').trim()
+		    env.WORKSPACE_LOCAL = sh(returnStdout: true, script: 'pwd').trim()
 		}
 		if (os.contains("windows")) {
 		    env.WORKSPACE_LOCAL = bat(returnStdout: true, script: 'echo %cd%').trim()
@@ -17,7 +17,7 @@ node() {
         echo "Build time:" + env.BUILD_TIME
     }
     stage('Checkout Self') {
-		echo "*** Checking Code out ***"
+		echo "*** Checking Code Out ***"
         git branch: 'master', credentialsId: '', url: repoURL
     }
     stage('Cucumber Tests') {
