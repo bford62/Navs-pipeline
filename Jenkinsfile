@@ -27,6 +27,7 @@ node() {
             if (os.contains("mac")) {                  
             sh """
                 cd ${env.WORKSPACE_LOCAL}
+				chmod -R 777 driver
 			    mvn clean test
             """
             }
