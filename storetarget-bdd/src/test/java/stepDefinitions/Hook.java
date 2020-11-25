@@ -33,7 +33,7 @@ public class Hook extends ApplicationPageBase {
             if (getOsNameFromSystem.contains("Mac")) {
                 System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
             } else if (getOsNameFromSystem.contains("Windows")) {
-                System.setProperty("webdriver.chrome.driver", "automationpractice-bdd/driver/chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
             }
             driver = new ChromeDriver(options);
 
@@ -53,10 +53,10 @@ public class Hook extends ApplicationPageBase {
 
 
             if (getOsNameFromSystem.contains("Windows")) {
-                System.setProperty("webdriver.gecko.driver", "../automationpractice-bdd/driver/geckodriver.exe");
+                System.setProperty("webdriver.gecko.driver", "../driver/geckodriver.exe");
                // driver = new FirefoxDriver(options);
             } else if (getOsNameFromSystem.contains("Mac")) {
-                System.setProperty("webdriver.gecko.driver", "../automationpractice-bdd/driver/geckodriver");
+                System.setProperty("webdriver.gecko.driver", "../driver/geckodriver");
               //  driver = new FirefoxDriver(options);
             }
             driver = new FirefoxDriver(capabilities);
