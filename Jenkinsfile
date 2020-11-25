@@ -7,7 +7,7 @@ node() {
 		cleanWs()
 		def os = System.properties['os.name'].toLowerCase()
 		if (os.contains("mac")) { 
-		    env.WORKSPACE_LOCAL = bat(returnStdout: true, script: 'echo %cd%').trim()
+		    env.WORKSPACE_LOCAL = sh(returnStdout: true, script: 'echo %cd%').trim()
 		}
 		if (os.contains("windows")) {
 		    env.WORKSPACE_LOCAL = bat(returnStdout: true, script: 'echo %cd%').trim()
