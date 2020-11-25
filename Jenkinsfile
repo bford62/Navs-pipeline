@@ -17,10 +17,19 @@ node() {
     stage('Cucumber Tests') {
 		echo "*** Execute Test Cases ***"
         withMaven(maven: 'Maven3.6.3') {
-            bat """
-			cd ${env.WORKSPACE_LOCAL}
-			mvn clean test
-		"""
+            def os = System.properties['os.name'].toLowerCase()
+            if (os.contains("mac")) {                  
+            sh """
+                cd ${env.WORKSPACE_LOCAL}
+			    mvn clean test
+            """
+            }
+            if (os.contains("windows")) {
+                bat """
+			    cd ${env.WORKSPACE_LOCAL}
+			    mvn clean test
+		    """
+            }
         }
     }
     stage('Expose report') {
