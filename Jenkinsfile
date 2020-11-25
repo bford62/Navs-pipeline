@@ -27,7 +27,7 @@ node() {
             if (os.contains("mac")) {                  
             sh """
                 cd ${env.WORKSPACE_LOCAL}
-				chmod -R 777 driver
+				chmod -R 777 storetarget-bdd/driver
 			    mvn clean test
             """
             }
