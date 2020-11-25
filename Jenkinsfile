@@ -5,7 +5,13 @@ node() {
     stage("Prepare Workspace") {
         echo "*** Prepare Workspace ***"
 		cleanWs()
-        env.WORKSPACE_LOCAL = bat(returnStdout: true, script: 'echo %cd%').trim()
+		def os = System.properties['os.name'].toLowerCase()
+		if (os.contains("mac")) { 
+		    env.WORKSPACE_LOCAL = bat(returnStdout: true, script: 'echo %cd%').trim()
+		}
+		if (os.contains("windows")) {
+		    env.WORKSPACE_LOCAL = bat(returnStdout: true, script: 'echo %cd%').trim()
+		}
         env.BUILD_TIME = "${BUILD_TIMESTAMP}"
         echo "Workspace set to:" + env.WORKSPACE_LOCAL
         echo "Build time:" + env.BUILD_TIME
