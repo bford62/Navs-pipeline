@@ -1,6 +1,6 @@
 node() {
 
-    def repoURL = 'https://pl-acegit01.as12083.net/wopr/nivid-xray-flow.git'
+    def repoURL = 'https://github.com/bford62/Navs-pipeline.git'
 
     stage("Prepare Workspace") {
         echo "*** Prepare Workspace ***"
