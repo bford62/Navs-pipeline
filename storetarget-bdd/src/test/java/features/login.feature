@@ -7,7 +7,7 @@ Feature: login feature
     Then user clicks on sign in button
     And there should be an error stating user should enter password
 
-  @SmokeTest @XT-139
+  @SmokeTest @XT-132
   Scenario: login with invalid credentials
     Given user is on the login page
     When user enters incorrect email
