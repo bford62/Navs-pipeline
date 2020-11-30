@@ -1,6 +1,6 @@
 Feature: login feature
 
-  @FunctionalTest
+  @FunctionalTest @XT-170
   Scenario: attempt to login with no password
     Given users is on the login page
     When users enters incorrect email
@@ -8,7 +8,7 @@ Feature: login feature
     Then users clicks on sign in button
     And theres should be an error stating user should enter password
 
-  @SmokeTest
+  @SmokeTest @XT-171
   Scenario: login with invalid credentials
     Given users is on the login page
     When users enters incorrect email
