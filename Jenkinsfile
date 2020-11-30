@@ -45,7 +45,7 @@ node() {
         archiveArtifacts "**/cucumber.json"
 		echo "*** cucumber cucumber.json ***"
         cucumber '**/cucumber.json'
-		junit 'storetarget-bdd/reporting/junit_xml/*.xml'
+		junit skipPublishingChecks: true, allowEmptyResults: true, keepLongStdio: true, testResults: 'storetarget-bdd/reporting/junit_xml/*.xml'
     }
 	stage('Import results to Xray') {
 		echo "*** Import Results to XRAY ***"
