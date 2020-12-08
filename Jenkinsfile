@@ -12,6 +12,9 @@ node() {
 		if (os.contains("windows")) {
 		    env.WORKSPACE_LOCAL = bat(returnStdout: true, script: 'echo %cd%').trim()
 		}
+        if (os.contains("linux")) {
+            env.WORKSPACE_LOCAL = sh(returnStdout: true, script: 'pwd').trim()
+		}
         env.BUILD_TIME = "${BUILD_TIMESTAMP}"
         echo "Workspace set to:" + env.WORKSPACE_LOCAL
         echo "Build time:" + env.BUILD_TIME
@@ -36,6 +39,13 @@ node() {
 			    cd ${env.WORKSPACE_LOCAL}
 			    mvn clean test
 		    """
+            }
+            if (os.contains("linux")) {                  
+            sh """
+                cd ${env.WORKSPACE_LOCAL}
+				chmod -R 777 storetarget-bdd/driver
+			    mvn clean test
+            """
             }
         }
     }
