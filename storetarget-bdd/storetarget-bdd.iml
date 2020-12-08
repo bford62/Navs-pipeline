@@ -120,5 +120,14 @@
     <orderEntry type="library" scope="TEST" name="Maven: io.cucumber:cucumber-expressions:6.2.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: io.cucumber:datatable:1.1.7" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: io.cucumber:datatable-dependencies:1.1.7" level="project" />
+    <orderEntry type="module-library">
+      <library name="Maven: com.sun:tools:1.8">
+        <CLASSES>
+          <root url="jar:///usr/lib/jvm/java-8-openjdk-amd64/lib/tools.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

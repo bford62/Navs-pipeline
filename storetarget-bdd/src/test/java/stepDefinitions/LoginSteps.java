@@ -15,7 +15,7 @@ public class LoginSteps extends ApplicationPageBase{
     TargetSignin targetSignin = PageFactory.initElements(driver, TargetSignin.class);
 
     @Given("^user is on the login page$")
-    public void user_is_on_the_login_page() {
+    public void user_is_on_the_login_page() throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
         targetHome.getSignOn();
         targetHome.clickSignOn();

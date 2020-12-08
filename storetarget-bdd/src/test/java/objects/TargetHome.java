@@ -78,9 +78,8 @@ public class TargetHome extends ApplicationPageBase {
     public void getSignOn() {
         sDropDown.click();
     }
-    public void clickSignOn(){
-        WebDriverWait wait = new WebDriverWait(driver,20);
-        wait.until(ExpectedConditions.elementToBeClickable(sTransport));
+    public void clickSignOn() throws InterruptedException {
+        Thread.sleep(3000);
         sTransport.click();
     }
     public WebElement isSignOn(){return sTransport;}
