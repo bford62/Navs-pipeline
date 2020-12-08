@@ -31,10 +31,11 @@ public class Hook extends ApplicationPageBase {
             capabilities.setCapability(ChromeOptions.CAPABILITY, options);
             System.out.println("Opening the browser : Chrome");
             if (getOsNameFromSystem.contains("Mac")) {
-                System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "driver/Mac/chromedriver");
             } else if (getOsNameFromSystem.contains("Windows")) {
                 System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
-            }
+            } else if (getOsNameFromSystem.contains("Linux")) {
+                System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
             driver = new ChromeDriver(options);
 
         }
