@@ -36,8 +36,8 @@ public class Hook extends ApplicationPageBase {
                 System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
             } else if (getOsNameFromSystem.contains("Linux")) {
                 System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
+			}
             driver = new ChromeDriver(options);
-
         }
         else if (browserName.equalsIgnoreCase("firefox")){
             /*
