@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 7420218495,
+  "duration": 6200754426,
   "status": "passed"
 });
 formatter.scenario({
@@ -57,43 +57,43 @@ formatter.match({
   "location": "LoginSteps.user_is_on_the_login_page()"
 });
 formatter.result({
-  "duration": 4908202518,
+  "duration": 4550899903,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.user_enters_incorrect_email()"
 });
 formatter.result({
-  "duration": 202474349,
+  "duration": 200620355,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.user_does_not_enter_input_in_password_field()"
 });
 formatter.result({
-  "duration": 27808816,
+  "duration": 26196588,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.user_clicks_on_sign_in_button()"
 });
 formatter.result({
-  "duration": 132467405,
+  "duration": 75224929,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.there_should_be_an_error_stating_user_should_enter_password()"
 });
 formatter.result({
-  "duration": 28246145,
+  "duration": 38821033,
   "status": "passed"
 });
 formatter.after({
-  "duration": 178944596,
+  "duration": 177405273,
   "status": "passed"
 });
 formatter.before({
-  "duration": 5971306626,
+  "duration": 5622170183,
   "status": "passed"
 });
 formatter.scenario({
@@ -143,39 +143,39 @@ formatter.match({
   "location": "LoginSteps.user_is_on_the_login_page()"
 });
 formatter.result({
-  "duration": 4429846868,
+  "duration": 4463369913,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.user_enters_incorrect_email()"
 });
 formatter.result({
-  "duration": 163119216,
+  "duration": 225803154,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.user_signs_enter_incorrect_password()"
 });
 formatter.result({
-  "duration": 114415309,
+  "duration": 126478890,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.user_clicks_on_sign_in_button()"
 });
 formatter.result({
-  "duration": 289173219,
+  "duration": 283740769,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.there_should_be_an_error_and_user_should_not_be_granted_access()"
 });
 formatter.result({
-  "duration": 48873,
+  "duration": 39549,
   "status": "passed"
 });
 formatter.after({
-  "duration": 221491730,
+  "duration": 173633826,
   "status": "passed"
 });
 formatter.uri("notlogin.feature");
@@ -187,7 +187,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 2289867029,
+  "duration": 5369675191,
   "status": "passed"
 });
 formatter.scenario({
@@ -237,40 +237,43 @@ formatter.match({
   "location": "NotLoginSteps.user_is_on_the_login_page()"
 });
 formatter.result({
-  "duration": 48807042,
-  "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: window was already closed\n  (Session info: chrome\u003d87.0.4280.88)\n  (Driver info: chromedriver\u003d87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}),platform\u003dMac OS X 10.15.7 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 47 milliseconds\nBuild info: version: \u00273.0.1\u0027, revision: \u00271969d75\u0027, time: \u00272016-10-18 09:49:13 -0700\u0027\nSystem info: host: \u0027Alis-MacBook-Pro.local\u0027, ip: \u0027192.168.0.113\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.7\u0027, java.version: \u00271.8.0_271\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities [{mobileEmulationEnabled\u003dfalse, timeouts\u003d{implicit\u003d0, pageLoad\u003d300000, script\u003d30000}, hasTouchScreen\u003dfalse, platform\u003dMAC, acceptSslCerts\u003dfalse, goog:chromeOptions\u003d{debuggerAddress\u003dlocalhost:53080}, acceptInsecureCerts\u003dfalse, webStorageEnabled\u003dtrue, browserName\u003dchrome, takesScreenshot\u003dtrue, javascriptEnabled\u003dtrue, setWindowRect\u003dtrue, unexpectedAlertBehaviour\u003dignore, applicationCacheEnabled\u003dfalse, rotatable\u003dfalse, networkConnectionEnabled\u003dfalse, chrome\u003d{chromedriverVersion\u003d87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}), userDataDir\u003d/var/folders/j3/dy9l261n2gn7wlvpw01536f00000gn/T/.com.google.Chrome.SFsnaH}, takesHeapSnapshot\u003dtrue, pageLoadStrategy\u003dnormal, strictFileInteractability\u003dfalse, databaseEnabled\u003dfalse, handlesAlerts\u003dtrue, version\u003d87.0.4280.88, browserConnectionEnabled\u003dfalse, proxy\u003d{}, nativeEvents\u003dtrue, locationContextEnabled\u003dtrue, cssSelectorsEnabled\u003dtrue, webauthn:virtualAuthenticators\u003dtrue}]\nSession ID: 1c298b69a7c11ebcd2d2bb904e80a77e\n*** Element info: {Using\u003dxpath, value\u003d//span[text() \u003d \"Sign in\"]}\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:361)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy16.click(Unknown Source)\n\tat objects.TargetHome.getSignOn(TargetHome.java:79)\n\tat stepDefinitions.NotLoginSteps.user_is_on_the_login_page(NotLoginSteps.java:20)\n\tat ✽.Given users is on the login page(notlogin.feature:5)\n",
-  "status": "failed"
+  "duration": 4344967476,
+  "status": "passed"
 });
 formatter.match({
   "location": "NotLoginSteps.user_enters_incorrect_email()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 209361487,
+  "status": "passed"
 });
 formatter.match({
   "location": "NotLoginSteps.user_does_not_enter_input_in_password_field()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 26576,
+  "status": "passed"
 });
 formatter.match({
   "location": "NotLoginSteps.user_clicks_on_sign_in_button()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 85035882,
+  "status": "passed"
 });
 formatter.match({
   "location": "NotLoginSteps.there_should_be_an_error_stating_user_should_enter_password()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 35365,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 174781655,
+  "duration": 174940461,
   "status": "passed"
 });
 formatter.before({
-  "duration": 5395711665,
+  "duration": 5496520070,
   "status": "passed"
 });
 formatter.scenario({
@@ -320,39 +323,39 @@ formatter.match({
   "location": "NotLoginSteps.user_is_on_the_login_page()"
 });
 formatter.result({
-  "duration": 4543368282,
+  "duration": 4560894932,
   "status": "passed"
 });
 formatter.match({
   "location": "NotLoginSteps.user_enters_incorrect_email()"
 });
 formatter.result({
-  "duration": 154691651,
+  "duration": 190490840,
   "status": "passed"
 });
 formatter.match({
   "location": "NotLoginSteps.user_signs_enter_incorrect_password()"
 });
 formatter.result({
-  "duration": 114942616,
+  "duration": 119059853,
   "status": "passed"
 });
 formatter.match({
   "location": "NotLoginSteps.user_clicks_on_sign_in_button()"
 });
 formatter.result({
-  "duration": 276233990,
+  "duration": 270360053,
   "status": "passed"
 });
 formatter.match({
   "location": "NotLoginSteps.there_should_be_an_error_and_user_should_not_be_granted_access()"
 });
 formatter.result({
-  "duration": 27990,
+  "duration": 68995,
   "status": "passed"
 });
 formatter.after({
-  "duration": 167308767,
+  "duration": 168840935,
   "status": "passed"
 });
 });

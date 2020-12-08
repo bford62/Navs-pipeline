@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="37.253505">
-<testcase classname="login feature" name="attempt to login with no password" time="12.898362">
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="43.155437">
+<testcase classname="login feature" name="attempt to login with no password" time="11.269923">
 <system-out><![CDATA[Given user is on the login page.............................................passed
 When user enters incorrect email............................................passed
 But user does not enter input in password field.............................passed
@@ -7,7 +7,7 @@ Then user clicks on sign in button..........................................pass
 And there should be an error stating user should enter password.............passed
 ]]></system-out>
 </testcase>
-<testcase classname="login feature" name="login with invalid credentials" time="11.189402">
+<testcase classname="login feature" name="login with invalid credentials" time="10.895236">
 <system-out><![CDATA[Given user is on the login page.............................................passed
 When user enters incorrect email............................................passed
 Then user signs enter incorrect password....................................passed
@@ -15,44 +15,15 @@ And user clicks on sign in button...........................................pass
 And There should be an error, and user should not be granted access.........passed
 ]]></system-out>
 </testcase>
-<testcase classname="login feature" name="attempt to login with no password" time="2.513456">
-<failure message="org.openqa.selenium.NoSuchWindowException: no such window: window was already closed&#10;  (Session info: chrome=87.0.4280.88)&#10;  (Driver info: chromedriver=87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}),platform=Mac OS X 10.15.7 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 47 milliseconds&#10;Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'&#10;System info: host: 'Alis-MacBook-Pro.local', ip: '192.168.0.113', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_271'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:53080}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}), userDataDir=/var/folders/j3/dy9l261n2gn7wlvpw01536f00000gn/T/.com.google.Chrome.SFsnaH}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=87.0.4280.88, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]&#10;Session ID: 1c298b69a7c11ebcd2d2bb904e80a77e&#10;*** Element info: {Using=xpath, value=//span[text() = &quot;Sign in&quot;]}&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:361)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#10;&#9;at com.sun.proxy.$Proxy16.click(Unknown Source)&#10;&#9;at objects.TargetHome.getSignOn(TargetHome.java:79)&#10;&#9;at stepDefinitions.NotLoginSteps.user_is_on_the_login_page(NotLoginSteps.java:20)&#10;&#9;at ✽.Given users is on the login page(notlogin.feature:5)&#10;"><![CDATA[Given users is on the login page............................................failed
-When users enters incorrect email...........................................skipped
-But users does not enter input in password field............................skipped
-Then users clicks on sign in button.........................................skipped
-And theres should be an error stating user should enter password............skipped
-
-StackTrace:
-org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
-  (Session info: chrome=87.0.4280.88)
-  (Driver info: chromedriver=87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}),platform=Mac OS X 10.15.7 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 47 milliseconds
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'Alis-MacBook-Pro.local', ip: '192.168.0.113', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '1.8.0_271'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:53080}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}), userDataDir=/var/folders/j3/dy9l261n2gn7wlvpw01536f00000gn/T/.com.google.Chrome.SFsnaH}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=87.0.4280.88, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
-Session ID: 1c298b69a7c11ebcd2d2bb904e80a77e
-*** Element info: {Using=xpath, value=//span[text() = "Sign in"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy16.click(Unknown Source)
-	at objects.TargetHome.getSignOn(TargetHome.java:79)
-	at stepDefinitions.NotLoginSteps.user_is_on_the_login_page(NotLoginSteps.java:20)
-	at ✽.Given users is on the login page(notlogin.feature:5)
-]]></failure>
+<testcase classname="login feature" name="attempt to login with no password" time="10.184042">
+<system-out><![CDATA[Given users is on the login page............................................passed
+When users enters incorrect email...........................................passed
+But users does not enter input in password field............................passed
+Then users clicks on sign in button.........................................passed
+And theres should be an error stating user should enter password............passed
+]]></system-out>
 </testcase>
-<testcase classname="login feature" name="login with invalid credentials" time="10.652285">
+<testcase classname="login feature" name="login with invalid credentials" time="10.806236">
 <system-out><![CDATA[Given users is on the login page............................................passed
 When users enters incorrect email...........................................passed
 Then users signs enter incorrect password...................................passed
