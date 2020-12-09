@@ -29,7 +29,7 @@ public class Hook extends ApplicationPageBase {
             options.addArguments("--disable-extensions"); // disabling extensions
             options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
             options.addArguments("--no-sandbox"); // Bypass OS security model
-            options.addArguments("--remote-debugging-port=8080");
+            options.addArguments("--remote-debugging-port=19213");
             options.addArguments("-disable-setuid-sandbox");
             options.addArguments("--headless");
 
