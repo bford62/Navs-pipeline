@@ -85,7 +85,8 @@ node() {
             step([$class: 'XrayImportBuilder', 
             projectKey: projectKey,  
 			importInfo: info, 
-            endpointName: '/junit', importFilePath: 'reports/*.xml',
+            endpointName: '/cucumber/multipart', 
+            importFilePath: 'storetarget-bdd/reporting/cucumber.json',
             summary: "Sample Jenkins STC - Automated Regression Execution @ ''' + env.BUILD_TIME + ' ' + environment + ''' ", 
             inputInfoSwitcher: 'fileContent', 
             serverInstance: xrayConnectorId])
