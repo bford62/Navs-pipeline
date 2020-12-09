@@ -23,9 +23,12 @@ public class Hook extends ApplicationPageBase {
 
             ChromeOptions options =new ChromeOptions();
             // options.setHeadless(true);
-            options.addArguments("--start-maximized");
             options.addArguments("--ignore-certificate-errors");
-            options.addArguments("--incognito");
+            options.addArguments("start-maximized"); // open Browser in maximized mode
+            options.addArguments("disable-infobars"); // disabling infobars
+            options.addArguments("--disable-extensions"); // disabling extensions
+            options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+            options.addArguments("--no-sandbox"); // Bypass OS security model
 
             DesiredCapabilities capabilities = DesiredCapabilities.chrome();
             capabilities.setCapability(ChromeOptions.CAPABILITY, options);
