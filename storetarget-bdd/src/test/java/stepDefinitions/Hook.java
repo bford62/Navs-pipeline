@@ -19,18 +19,18 @@ public class Hook extends ApplicationPageBase {
         String getOsNameFromSystem = System.getProperty("os.name");
         String browserName = System.getProperty("browser", "chrome");
         System.out.println("**************"+browserName);
+        System.out.println("**************"+getOsNameFromSystem);
         if(browserName.equalsIgnoreCase("chrome")){
 
             ChromeOptions options =new ChromeOptions();
-            // options.setHeadless(true);
             options.addArguments("--ignore-certificate-errors");
-            options.addArguments("start-maximized"); // open Browser in maximized mode
-            options.addArguments("disable-infobars"); // disabling infobars
+            //options.addArguments("--start-minimized"); // open Browser in maximized mode
+            options.addArguments("--disable-infobars"); // disabling infobars
             options.addArguments("--disable-extensions"); // disabling extensions
             options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
             options.addArguments("--no-sandbox"); // Bypass OS security model
-            options.addArguments("--remote-debugging-port=8080");
-            options.addArguments("-disable-setuid-sandbox");
+           // options.addArguments("--remote-debugging-port=8080");
+            options.addArguments("--disable-setuid-sandbox");
             options.addArguments("--headless");
 
             DesiredCapabilities capabilities = DesiredCapabilities.chrome();
