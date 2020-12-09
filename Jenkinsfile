@@ -68,27 +68,27 @@ node() {
 		def projectKey = "Xray-Test"
 		def projectId = 10606
 		def xrayConnectorId = "${xrayConnectorId}"
-        def info = '''{
-                "fields": {
-                    "projectKey":''' + projectKey + ''',
-                    "labels":''' + labels + ''',
-                    "description":"''' + description + '''",
-                    "summary": "Sample Jenkins STC - Automated Regression Execution @ ''' + env.BUILD_TIME + ' ' + environment + ''' " ,
-                    "issuetype": {
-                        "id": "''' + testExecutionFieldId + '''"
-                    }
-                }
-                }'''
-            echo "*** THIS IS THE XRAY INFO ***"
-            echo "${info}"
-            echo "*** XrayImportBuilder ***"
-            step([$class: 'XrayImportBuilder', 
-            projectKey: projectKey,  
+		def info = '''{
+				"fields": {
+					"project": {
+					"id": "''' + projectId + '''"
+				},
+				"labels":''' + labels + ''',
+				"description":"''' + description + '''",
+				"summary": "Testing Jenkins - Automated Regression Execution @ ''' + env.BUILD_TIME + ' ' + environment + ''' " ,
+				"issuetype": {
+				"id": "''' + testExecutionFieldId + '''"
+				}
+				}
+				}'''
+
+			echo info
+
+			step([$class: 'XrayImportBuilder', 
+			endpointName: '/cucumber/multipart', 
+			importFilePath: 'storetarget-bdd/reporting/cucumber.json', 
 			importInfo: info, 
-            endpointName: '/cucumber/multipart', 
-            importFilePath: 'storetarget-bdd/reporting/cucumber.json',
-            summary: "Sample Jenkins STC - Automated Regression Execution @ ''' + env.BUILD_TIME + ' ' + environment + ''' ", 
-            inputInfoSwitcher: 'fileContent', 
-            serverInstance: xrayConnectorId])
-        }
+			inputInfoSwitcher: 'fileContent', 
+			serverInstance: xrayConnectorId])
+		}
 }
