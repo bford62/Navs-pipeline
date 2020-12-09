@@ -29,6 +29,9 @@ public class Hook extends ApplicationPageBase {
             options.addArguments("--disable-extensions"); // disabling extensions
             options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
             options.addArguments("--no-sandbox"); // Bypass OS security model
+            options.addArguments("--remote-debugging-port=9222");
+            options.addArguments("-disable-setuid-sandbox");
+            options.addArguments("--disable-dev-shm-using");
 
             DesiredCapabilities capabilities = DesiredCapabilities.chrome();
             capabilities.setCapability(ChromeOptions.CAPABILITY, options);
