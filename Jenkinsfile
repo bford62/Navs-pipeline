@@ -56,12 +56,16 @@ node() {
 		echo "*** cucumber cucumber.json ***"
         cucumber '**/cucumber.json'
 		junit skipPublishingChecks: true, allowEmptyResults: true, keepLongStdio: true, testResults: 'storetarget-bdd/reporting/junit_xml/*.xml'
+    }
+	
+    stage ('Cucumber Reports') {
         steps {
             cucumber buildStatus: "UNSTABLE",
             fileIncludePattern: "**/cucumber.json",
             jsonReportDirectory: 'storetarget-bdd/reporting'
         }
     }
+
 
 	stage('Import results to Xray') {
 		echo "*** Import Results to XRAY ***"
@@ -100,4 +104,3 @@ node() {
 
 
 }
-//todo set up reporting
