@@ -56,12 +56,17 @@ node() {
 		echo "*** cucumber cucumber.json ***"
         cucumber '**/cucumber.json'
 		junit skipPublishingChecks: true, allowEmptyResults: true, keepLongStdio: true, testResults: 'storetarget-bdd/reporting/junit_xml/*.xml'
+        steps {
+            cucumber buildStatus: "UNSTABLE",
+            fileIncludePattern: "**/cucumber.json",
+            jsonReportDirectory: 'storetarget-bdd/reporting'
+        }
     }
 
 	stage('Import results to Xray') {
 		echo "*** Import Results to XRAY ***"
 
-		def description = "[TEST_BUILD_URL|${env.BUILD_URL}/cucumber-html-reports/overview-features.html]"
+		def description = "[Report Output|${env.BUILD_URL}/cucumber-html-reports/overview-features.html]"
 		def labels = '["regression","automated_regression"]'
 		def environment = "DEV"
 		def testExecutionFieldId = 10552
