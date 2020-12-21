@@ -1,32 +1,5 @@
 node() {
-def notifyBuild(String buildStatus = 'STARTED') {
-    // build status of null means successful
-    buildStatus =  buildStatus ?: 'SUCCESSFUL'
 
-    // Default values
-    def colorName = 'RED'
-    def colorCode = '#FF0000'
-    def subject = "${buildStatus}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
-    def summary = "${subject} (${env.BUILD_URL})"
-
-    // Override default values based on build status
-    if (buildStatus == 'STARTED') {
-      color = 'BLUE'
-      colorCode = '#0000FF'
-    } else if (buildStatus == 'UNSTABLE') {
-      color = 'YELLOW'
-      colorCode = '#FFFF00'
-    } else if (buildStatus == 'SUCCESSFUL') {
-      color = 'GREEN'
-      colorCode = '#00FF00'
-    } else {
-      color = 'RED'
-      colorCode = '#FF0000'
-    }
-
-    // Send notifications
-    slackSend (color: colorCode, message: summary)
-}
     def repoURL = 'https://github.com/bford62/Navs-pipeline.git'
     try {
         notifyBuild('STARTED')
@@ -134,15 +107,19 @@ def notifyBuild(String buildStatus = 'STARTED') {
 //        }                                
     }                                    
     catch(e) {                           
-        slackSend baseUrl: 'https://hooks.slack.com/services/', 
-    	channel: '#wopr-private', 
-    	color: 'danger', 
-    	message: "Build: ${env.JOB_NAME} had a Failure. Check console ${env.BUILD_URL}/console",
-    	teamDomain: 'https://wow-technology.slack.com', 
-    	tokenCredentialId: 'Slack-Token', 
-    	username: 'JenkinsAutomation'
+//      slackSend baseUrl: 'https://hooks.slack.com/services/', 
+//    	channel: '#wopr-private', 
+//    	color: 'danger', 
+//    	message: "Build: ${env.JOB_NAME} had a Failure. Check console ${env.BUILD_URL}/console",
+//    	teamDomain: 'https://wow-technology.slack.com', 
+//    	tokenCredentialId: 'Slack-Token', 
+//    	username: 'JenkinsAutomation'
+        // If there was an exception thrown, the build failed
+        currentBuild.result = "FAILED"
+        throw e
     } finally {
         // Success or failure, always send notifications
+		echo "I AM HERE"
         notifyBuild(currentBuild.result)
     }
 
