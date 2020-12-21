@@ -104,25 +104,22 @@ node() {
 		tokenCredentialId: 'Slack-Token', 
 		username: 'JenkinsAutomation'
     }
-//     stage('Email Notification') {
-//          wrap([$class: 'BuildUser']) {
-//              emailext (
-//              subject: "${status}: Job ${env.JOB_NAME} ([${env.BUILD_NUMBER})",
-//              body: """
-//              Check console output at <a href="${env.BUILD_URL}">${env.JOB_NAME} (${env.BUILD_NUMBER})</a>""",
-//              to: "knavid973@gmail.com",
-//              from: 'knavid973@gmail.com')
-//          }
-//       }
 
-        stage('Email AfterTest') {
-              to: 'knavid973@gmail.com',
-              from: 'knavid973@gmail.com',
+//         stage('Email AfterTest') {
+//               to: 'knavid973@gmail.com',
+//               from: 'knavid973@gmail.com',
 //               replyTo: 'knavid973@gmail.com',
-              subject: "${status}: Job ${env.JOB_NAME} ([${env.BUILD_NUMBER})",
-              body: """
-              Check console output at <a href="${env.BUILD_URL}">${env.JOB_NAME} (${env.BUILD_NUMBER})</a>""",
-              attachLog: true,
-              mimeType: 'text/html',
+//               subject: "${status}: Job ${env.JOB_NAME} ([${env.BUILD_NUMBER})",
+//               body: """
+//               Check console output at <a href="${env.BUILD_URL}">${env.JOB_NAME} (${env.BUILD_NUMBER})</a>""",
+//               attachLog: true,
+//               mimeType: 'text/html',
+//         }
+        stage ('Email End Results') {
+        emailext (
+            subject: "Job '${env.JOB_NAME} ${env.BUILD_NUMBER}'",
+            body: """<p>Check console output at <a href="${env.BUILD_URL}">${env.JOB_NAME}</a></p>""",
+            to: "knavid973@gmail.com",
+            from: "knavid973@gmail.com" )
         }
 }
