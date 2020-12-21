@@ -65,7 +65,7 @@ node() {
         stage('Import results to Xray') {
             echo "*** Import Results to XRAY ***"
 
-            def escription = "[Report Output|${env.BUILD_URL}/cucumber-html-reports/overview-features.html]"
+            def description = "[Report Output|${env.BUILD_URL}/cucumber-html-reports/overview-features.html]"
             def labels = '["regression","automated_regression"]'
             def environment = "DEV"
             def testExecutionFieldId = 10552
@@ -96,15 +96,15 @@ node() {
             inputInfoSwitcher: 'fileContent', 
             serverInstance: xrayConnectorId])
         }
-        stage('Slack Notification'){
-            slackSend baseUrl: 'https://hooks.slack.com/services/', 
-    		channel: '#wopr-private', 
-    		color: 'good', 
-    		message: "Build: ${env.JOB_NAME} Completed Successfully ${env.BUILD_URL} Report: ${env.BUILD_URL}/cucumber-html-reports/overview-features.html",
-    		teamDomain: 'https://wow-technology.slack.com', 
-    		tokenCredentialId: 'Slack-Token', 
-    		username: 'JenkinsAutomation'
-        }                                
+//        stage('Slack Notification'){
+//            slackSend baseUrl: 'https://hooks.slack.com/services/', 
+//    		channel: '#wopr-private', 
+//    		color: 'good', 
+//    		message: "Build: ${env.JOB_NAME} Completed Successfully ${env.BUILD_URL} Report: ${env.BUILD_URL}/cucumber-html-reports/overview-features.html",
+//    		teamDomain: 'https://wow-technology.slack.com', 
+//    		tokenCredentialId: 'Slack-Token', 
+//    		username: 'JenkinsAutomation'
+//        }                                
     }                                    
     catch(e) {                           
         slackSend baseUrl: 'https://hooks.slack.com/services/', 
