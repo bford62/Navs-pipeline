@@ -64,7 +64,7 @@ node() {
         stage('Import results to Xray') {
             echo "*** Import Results to XRAY ***"
 
-            def escription = "[Report Output|${env.BUILD_URL}/cucumber-html-reports/overview-features.html]"
+            def description = "[Report Output|${env.BUILD_URL}/cucumber-html-reports/overview-features.html]"
             def labels = '["regression","automated_regression"]'
             def environment = "DEV"
             def testExecutionFieldId = 10552
@@ -114,6 +114,24 @@ node() {
     	tokenCredentialId: 'Slack-Token', 
     	username: 'JenkinsAutomation'
     }		
+    post {
+        always {
+            echo 'One way or another, I have finished'
+            deleteDir() /* clean up our workspace */
+        }
+        success {
+            echo 'I succeeded!'
+        }
+        unstable {
+            echo 'I am unstable :/'
+        }
+        failure {
+            echo 'I failed :('
+        }
+        changed {
+            echo 'Things were different before...'
+        }
+    }
 //         stage('Email AfterTest') {    
 //               to: 'knavid973@gmail.com',
 //               from: 'knavid973@gmail.com',
