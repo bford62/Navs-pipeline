@@ -109,7 +109,7 @@ node() {
         slackSend baseUrl: 'https://hooks.slack.com/services/', 
     	channel: '#wopr-private', 
     	color: 'danger', 
-    	message: "Build: ${env.JOB_NAME} Failured to buld",
+    	message: "Build: ${env.JOB_NAME} had a Failure. Check console ${env.BUILD_URL}/console",
     	teamDomain: 'https://wow-technology.slack.com', 
     	tokenCredentialId: 'Slack-Token', 
     	username: 'JenkinsAutomation'
