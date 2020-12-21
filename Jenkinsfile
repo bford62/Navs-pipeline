@@ -64,7 +64,7 @@ node() {
         stage('Import results to Xray') {
             echo "*** Import Results to XRAY ***"
 
-            def description = "[Report Output|${env.BUILD_URL}/cucumber-html-reports/overview-features.html]"
+            def escription = "[Report Output|${env.BUILD_URL}/cucumber-html-reports/overview-features.html]"
             def labels = '["regression","automated_regression"]'
             def environment = "DEV"
             def testExecutionFieldId = 10552
