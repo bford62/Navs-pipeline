@@ -105,7 +105,7 @@ node() {
     		username: 'JenkinsAutomation'
         }                                
     }                                    
-    catch()e {                           
+    catch(e) {                           
         slackSend baseUrl: 'https://hooks.slack.com/services/', 
     	channel: '#wopr-private', 
     	color: 'danger', 
