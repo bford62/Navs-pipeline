@@ -116,7 +116,7 @@ node() {
 //       }
 
         stage('Email AfterTest') {
-              to: 'destination@whatever.com',
+              to: 'knavid973@gmail.com',
               from: 'knavid973@gmail.com',
               replyTo: 'knavid973@gmail.com',
               subject: "${status}: Job ${env.JOB_NAME} ([${env.BUILD_NUMBER})",
