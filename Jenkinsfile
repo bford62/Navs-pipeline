@@ -157,7 +157,7 @@ def notifyBuild(String buildStatus = 'STARTED') {
       if (buildStatus == 'STARTED') {
         color = 'BLUE'
         colorCode = '#0000FF'
-		msg = "Build: ${env.JOB_NAME} has started: env.BUILD_TIME"
+		msg = "Build: ${env.JOB_NAME} has started: ${BUILD_TIMESTAMP}"
       } else if (buildStatus == 'UNSTABLE') {
         color = 'YELLOW'
         colorCode = '#FFFF00'
