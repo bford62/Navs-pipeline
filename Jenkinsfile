@@ -157,19 +157,19 @@ def notifyBuild(String buildStatus = 'STARTED') {
       if (buildStatus == 'STARTED') {
         color = 'BLUE'
         colorCode = '#0000FF'
-		def msg = "Build: ${env.JOB_NAME} has started"
+		msg = "Build: ${env.JOB_NAME} has started"
       } else if (buildStatus == 'UNSTABLE') {
         color = 'YELLOW'
         colorCode = '#FFFF00'
-		def msg = "Build: ${env.JOB_NAME} was listed as unstable. Look at ${env.BUILD_URL} and Report: ${env.BUILD_URL}/cucumber-html-reports/overview-features.html"
+		msg = "Build: ${env.JOB_NAME} was listed as unstable. Look at ${env.BUILD_URL} and Report: ${env.BUILD_URL}/cucumber-html-reports/overview-features.html"
       } else if (buildStatus == 'SUCCESSFUL') {
         color = 'GREEN'
         colorCode = '#00FF00'
-		def msg = "Build: ${env.JOB_NAME} Completed Successfully ${env.BUILD_URL} Report: ${env.BUILD_URL}/cucumber-html-reports/overview-features.html"
+		msg = "Build: ${env.JOB_NAME} Completed Successfully ${env.BUILD_URL} Report: ${env.BUILD_URL}/cucumber-html-reports/overview-features.html"
       } else {
         color = 'RED'
         colorCode = '#FF0000'
-		def msg = "Build: ${env.JOB_NAME} had an issue ${env.BUILD_URL}/console"
+		msg = "Build: ${env.JOB_NAME} had an issue ${env.BUILD_URL}/console"
       }
 
     // Send notifications
