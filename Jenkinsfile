@@ -1,5 +1,5 @@
 node() {
-
+    
     def repoURL = 'https://github.com/bford62/Navs-pipeline.git'
     try {
         notifyBuild('STARTED')
@@ -96,30 +96,14 @@ node() {
             inputInfoSwitcher: 'fileContent', 
             serverInstance: xrayConnectorId])
         }
-//        stage('Slack Notification'){
-//            slackSend baseUrl: 'https://hooks.slack.com/services/', 
-//    		channel: '#wopr-private', 
-//    		color: 'good', 
-//    		message: "Build: ${env.JOB_NAME} Completed Successfully ${env.BUILD_URL} Report: ${env.BUILD_URL}/cucumber-html-reports/overview-features.html",
-//    		teamDomain: 'https://wow-technology.slack.com', 
-//    		tokenCredentialId: 'Slack-Token', 
-//    		username: 'JenkinsAutomation'
-//        }                                
     }                                    
     catch(e) {                           
-//      slackSend baseUrl: 'https://hooks.slack.com/services/', 
-//    	channel: '#wopr-private', 
-//    	color: 'danger', 
-//    	message: "Build: ${env.JOB_NAME} had a Failure. Check console ${env.BUILD_URL}/console",
-//    	teamDomain: 'https://wow-technology.slack.com', 
-//    	tokenCredentialId: 'Slack-Token', 
-//    	username: 'JenkinsAutomation'
         // If there was an exception thrown, the build failed
         currentBuild.result = "FAILED"
         throw e
     } finally {
         // Success or failure, always send notifications
-		echo "I AM HERE"
+        echo "I AM HERE"
         notifyBuild(currentBuild.result)
     }
 
@@ -157,28 +141,28 @@ def notifyBuild(String buildStatus = 'STARTED') {
       if (buildStatus == 'STARTED') {
         color = 'BLUE'
         colorCode = '#0000FF'
-		msg = "Build: ${env.JOB_NAME} has started: ${BUILD_TIMESTAMP}"
+        msg = "Build: ${env.JOB_NAME} has started: ${BUILD_TIMESTAMP}"
       } else if (buildStatus == 'UNSTABLE') {
         color = 'YELLOW'
         colorCode = '#FFFF00'
-		msg = "Build: ${env.JOB_NAME} was listed as unstable. Look at ${env.BUILD_URL} and Report: ${env.BUILD_URL}/cucumber-html-reports/overview-features.html"
+        msg = "Build: ${env.JOB_NAME} was listed as unstable. Look at ${env.BUILD_URL} and Report: ${env.BUILD_URL}/cucumber-html-reports/overview-features.html"
       } else if (buildStatus == 'SUCCESSFUL') {
         color = 'GREEN'
         colorCode = '#00FF00'
-		msg = "Build: ${env.JOB_NAME} Completed Successfully ${env.BUILD_URL} Report: ${env.BUILD_URL}/cucumber-html-reports/overview-features.html"
+        msg = "Build: ${env.JOB_NAME} Completed Successfully ${env.BUILD_URL} Report: ${env.BUILD_URL}/cucumber-html-reports/overview-features.html"
       } else {
         color = 'RED'
         colorCode = '#FF0000'
-		msg = "Build: ${env.JOB_NAME} had an issue ${env.BUILD_URL}/console"
+        msg = "Build: ${env.JOB_NAME} had an issue ${env.BUILD_URL}/console"
       }
 
     // Send notifications
     slackSend (color: colorCode, message: summary)
     slackSend baseUrl: 'https://hooks.slack.com/services/', 
-	channel: '#wopr-private', 
-	color: colorCode, 
-	message: msg,
-	teamDomain: 'https://wow-technology.slack.com', 
-	tokenCredentialId: 'Slack-Token', 
- 	username: 'JenkinsAutomation'
+    channel: '#wopr-private', 
+    color: colorCode, 
+    message: msg,
+    teamDomain: 'https://wow-technology.slack.com', 
+    tokenCredentialId: 'Slack-Token', 
+    username: 'JenkinsAutomation'
 }
