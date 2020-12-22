@@ -65,7 +65,7 @@ node() {
         stage('Import results to Xray') {
             echo "*** Import Results to XRAY ***"
 
-            def escription = "[Report Output|${env.BUILD_URL}/cucumber-html-reports/overview-features.html]"
+            def description = "[Report Output|${env.BUILD_URL}/cucumber-html-reports/overview-features.html]"
             def labels = '["regression","automated_regression"]'
             def environment = "DEV"
             def testExecutionFieldId = 10552
@@ -157,7 +157,7 @@ def notifyBuild(String buildStatus = 'STARTED') {
       if (buildStatus == 'STARTED') {
         color = 'BLUE'
         colorCode = '#0000FF'
-		msg = "Build: ${env.JOB_NAME} has started"
+		msg = "Build: ${env.JOB_NAME} has started: env.BUILD_TIME"
       } else if (buildStatus == 'UNSTABLE') {
         color = 'YELLOW'
         colorCode = '#FFFF00'
