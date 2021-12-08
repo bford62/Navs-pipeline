@@ -1,0 +1,86 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3845538158,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.initializeTest()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Log in with invalid credentials",
+        "description": "",
+        "id": "login-feature;log-in-with-invalid-credentials",
+        "after": [
+          {
+            "result": {
+              "duration": 100288997,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.tearDownTest(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 17687231856,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User need to enter MAC Address to CableMedic",
+            "match": {
+              "location": "LoginSteps.user_need_to_enter_MAC_Address_to_CableMedic()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 56506,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User clicked upgrade, it shows in progress",
+            "match": {
+              "location": "LoginSteps.User_clicked_upgade_it_shows_in_progress()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1843629,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User has upgraded modem",
+            "match": {
+              "location": "LoginSteps.User_has_upgraded_modem()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login feature",
+    "description": "",
+    "id": "login-feature",
+    "keyword": "Feature",
+    "uri": "login.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@SmokeTest"
+      }
+    ]
+  }
+]
