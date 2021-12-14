@@ -31,7 +31,7 @@ public class Hook extends ApplicationPageBase {
             options.addArguments("--no-sandbox"); // Bypass OS security model
            // options.addArguments("--remote-debugging-port=8080");
             options.addArguments("--disable-setuid-sandbox");
-//            options.addArguments("--headless");
+            options.addArguments("--headless");
 
             DesiredCapabilities capabilities = DesiredCapabilities.chrome();
             capabilities.setCapability(ChromeOptions.CAPABILITY, options);
@@ -71,7 +71,7 @@ public class Hook extends ApplicationPageBase {
 
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS); // 20
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS); //35
-        driver.get("https://cablemedicqa.arc.ninjaneers.net/");
+        driver.get("https://www.target.com/");
        // driver.manage().window().maximize();
     }
     @After

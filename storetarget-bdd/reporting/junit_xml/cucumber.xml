@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="21.634959">
-<testcase classname="Login feature" name="Log in with invalid credentials" time="21.634959">
-<system-out><![CDATA[Given User need to enter MAC Address to CableMedic..........................passed
-When User clicked upgrade, it shows in progress.............................passed
-Then User has upgraded modem................................................passed
-]]></system-out>
-</testcase>
-</testsuite>
